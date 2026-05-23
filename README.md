@@ -1,4 +1,5 @@
 # Shipment Tracking UI
+<img width="1019" height="942" alt="image" src="https://github.com/user-attachments/assets/5f0a2525-8b02-4469-9e5a-29ddb183d1d3" />
 
 A demo of a package tracking page based on HTML, CSS, and JavaScript. This project does not use a database; all demo data is stored locally in `shipments.js`.
 
