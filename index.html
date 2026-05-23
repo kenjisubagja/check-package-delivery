@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hopeless Express - Cek Paket</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <div class="brand">
+          <div class="brand-mark">H</div>
+          <div>
+            <strong>Hopeless Express</strong>
+            <span>Cek Paket</span>
+          </div>
+        </div>
+
+        <h1>Cek Paket Anda</h1>
+        <p class="subtitle">Lacak paket Anda atau paket yang Anda kirim dengan mudah dan cepat.</p>
+
+        <section class="tracking-stage" aria-label="Animasi pengiriman paket">
+          <div class="skyline" aria-hidden="true"></div>
+          <div class="cloud cloud-left" aria-hidden="true"></div>
+          <div class="cloud cloud-right" aria-hidden="true"></div>
+          <svg class="route-line" viewBox="0 0 1000 280" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M 0 220 C 160 275, 220 165, 360 180 S 560 255, 680 188 S 790 95, 1000 108" />
+          </svg>
+
+          <div class="truck-scene" aria-hidden="true">
+            <div class="moving-truck" id="movingTruck">
+              <div class="truck-cargo"></div>
+              <div class="truck-front"></div>
+              <span class="wheel wheel-back"></span>
+              <span class="wheel wheel-front"></span>
+              <span class="truck-light"></span>
+              <span class="speed-line speed-a"></span>
+              <span class="speed-line speed-b"></span>
+              <span class="speed-line speed-c"></span>
+            </div>
+          </div>
+
+          <div class="destination" aria-hidden="true">
+            <div class="pin"></div>
+            <div class="drop-zone">
+              <div class="parcel" id="parcelBox">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="form-card" aria-labelledby="formTitle">
+          <h2 id="formTitle">Lacak Paket</h2>
+          <label>
+            <span>Data Demo</span>
+            <select id="demoShipment">
+              <option value="BM-2025-0001">BM-2025-0001 - Dalam Perjalanan</option>
+              <option value="BM-2025-0002">BM-2025-0002 - Paket di Lokasi Sortir</option>
+              <option value="BM-2025-0003">BM-2025-0003 - Paket Sudah Tiba</option>
+            </select>
+          </label>
+          <label>
+            <span>Nomor Resi</span>
+            <input id="receiptInput" type="text" value="BM-2025-0001" />
+          </label>
+          <label>
+            <span>Nama Lengkap Penerima</span>
+            <input id="receiverInput" type="text" value="Kenji Subagja" />
+          </label>
+          <button id="trackButton" type="button">Cek Paket</button>
+        </section>
+
+        <section class="status-card" aria-live="polite">
+          <div class="status-heading">
+            <div class="status-icon">🚚</div>
+            <div>
+              <span>Status Pengiriman</span>
+              <strong id="statusText">Dalam Perjalanan</strong>
+            </div>
+          </div>
+
+          <div class="progress-line">
+            <span class="dot active"></span>
+            <span class="bar" id="progressBar"></span>
+            <span class="dot middle"></span>
+            <span class="dot end"></span>
+          </div>
+
+          <div class="details-grid">
+            <div>
+              <span>Nomor Resi</span>
+              <strong id="receiptText">BM-2025-0001</strong>
+            </div>
+            <div>
+              <span>Dari</span>
+              <strong id="originText">Jakarta, DKI Jakarta</strong>
+            </div>
+            <div>
+              <span>Penerima</span>
+              <strong id="receiverText">Kenji Subagja</strong>
+            </div>
+            <div>
+              <span>Tujuan</span>
+              <strong id="destinationText">Bandung, Jawa Barat</strong>
+            </div>
+            <div>
+              <span>Estimasi Tiba</span>
+              <strong id="estimateText">23 Mei 2026</strong>
+            </div>
+            <div>
+              <span>Kurir</span>
+              <strong id="courierText">Hopeless Express</strong>
+            </div>
+          </div>
+        </section>
+
+        <p class="notice">Untuk keamanan pastikan nomor resi dan nama penerima sesuai.</p>
+      </section>
+    </main>
+
+    <script src="shipments.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
